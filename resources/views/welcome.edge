@@ -16,5 +16,17 @@
       </p>
     </div>
   </section>
+  <script src="https://unpkg.com/@adonisjs/websocket-client"></script>
+  <script>
+    const ws = adonis.Ws('ws://localhost:3333', {
+      path: 'adonis-ws'
+    })
+
+    const jwtToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjEsImlhdCI6MTYwMzE5ODQyOX0.lfTXNC6x-0sW0PiUpc_ro5-zucLu4NCdjowNotbMqxY"
+
+    ws
+    .withJwtToken(jwtToken)
+    .connect()
+  </script>
 </body>
 </html>
