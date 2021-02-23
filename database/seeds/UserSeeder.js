@@ -18,7 +18,7 @@ class UserSeeder {
   async run () {
     const u1 = new User()
     u1.name = 'geekbim'
-    u1.password = 'spenzaka01'
+    u1.password = '*****'
     u1.email = 'manyuabim9@gmail.com'
     u1.role = 'member'
     await u1.save()
